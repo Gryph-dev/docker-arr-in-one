@@ -1,0 +1,17 @@
+services:
+  dock-arr:
+    image: "ghcr.io/gryph-dev/docker-arr-in-one"
+    volumes: "./config:/data/" # for testing
+    ports: 
+      "6969:6969"
+      "7878:7878"
+      "8686:8686"
+      "8787:8787"
+      "8989:8989"
+      "9696:9696"
+    environment:
+      - "PUID=1000"
+      - "PGID=1000"
+      - "TZ=Europe/London"
+      - "WHISPARR=false"
+      - "READARR=false"
